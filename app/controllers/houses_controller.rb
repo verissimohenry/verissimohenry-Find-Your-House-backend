@@ -10,7 +10,8 @@ class HousesController < ApplicationController
   end
 
   def index
-    render json: House.all, status: :ok
+    @houses = House.all
+    json_response(@houses)
   end
 
   def show
@@ -25,6 +26,6 @@ class HousesController < ApplicationController
   private
 
   def house_params
-    params.permit(:name, :description, :location, :price, :photo)
+    params.require(:house).permit(:name, :description, :location, :price, :photo)
   end
 end
