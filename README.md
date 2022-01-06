@@ -1,10 +1,10 @@
 # Find-Your-House-backend
 
-This is backend API built for [Find-Your-House](https://github.com/verissimohenry/-Find-Your-House-backend.git).
+This is backend API built for [Find-Your-House](https://github.com/verissimohenry/Backend-find-your-house.git).
 
 ## Live Demo
 
-[Try it out here](https://friendly-yonath-3ed2b1.netlify.app/)
+[Try it out here](https://61d6c159e9cb5aaf7e26b822--flamboyant-mestorf-3e0545.netlify.app/)
 
 ### Built with
 
@@ -13,7 +13,7 @@ This is backend API built for [Find-Your-House](https://github.com/verissimohenr
 
 ## Getting Started Locally
 
-- Clone the repo `https://github.com/verissimohenry/-Find-Your-House-backend.git`
+- Clone the repo `https://github.com/verissimohenry/Backend-find-your-house.git`
 - cd into the project
 - Run `bundle install` to install dependencies
 - In the terminal run `rails server` open up the live server
