@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_06_112613) do
+ActiveRecord::Schema.define(version: 2022_01_05_111417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,18 +18,18 @@ ActiveRecord::Schema.define(version: 2022_01_06_112613) do
   create_table "favorites", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "house_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["house_id"], name: "index_favorites_on_house_id", unique: true
     t.index ["user_id"], name: "index_favorites_on_user_id", unique: true
   end
 
   create_table "houses", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type", null: false
+    t.string "category", null: false
     t.string "description", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "photo_url"
   end
 
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2022_01_06_112613) do
     t.string "name", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
