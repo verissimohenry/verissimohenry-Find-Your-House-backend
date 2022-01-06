@@ -1,4 +1,4 @@
-class CreateFavorites < ActiveRecord::Migration[6.1]
+class CreateFavorites < ActiveRecord::Migration[5.1]
   def change
     create_table :favorites do |t|
       t.bigint :user_id

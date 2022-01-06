@@ -35,10 +35,11 @@ gem 'jwt'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'sqlite3'
 
   gem 'factory_bot_rails'
+  gem 'rails_12factor'
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'sqlite3'
 end
 
 group :development do

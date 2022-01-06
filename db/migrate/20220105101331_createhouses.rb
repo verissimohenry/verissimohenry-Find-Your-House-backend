@@ -1,4 +1,4 @@
-class Createhouses < ActiveRecord::Migration[6.1]
+class Createhouses < ActiveRecord::Migration[5.1]
   def change
     create_table :houses do |t|
       t.string :name, null: false

@@ -1,4 +1,4 @@
-class Createusers < ActiveRecord::Migration[6.1]
+class Createusers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
       t.string :name, null: false
