@@ -7,17 +7,12 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3000', 'https://61d6c159e9cb5aaf7e26b822--flamboyant-mestorf-3e0545.netlify.app/'
-
-    resource '*',
-             headers: :any,
-             methods: %i[get post put patch delete options head],
-             credentials: true
-
-             res.set({
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Headers': '*',
-              'Access-Control-Allow-Methods': 'POST,GET,DELETE,PUT,OPTIONS'
-      });         
+    origins '*'
+    resource(
+     '*',
+     headers: :any,
+     expose: ["Authorization"],
+     methods: [:get, :patch, :put, :delete, :post, :options, :show]
+    )
   end
 end
