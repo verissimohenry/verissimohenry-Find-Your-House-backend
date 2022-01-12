@@ -3,7 +3,7 @@ class Api::V1::HousesController < ApplicationController
   def index
     @houses = House.all
     render json: @houses
-   end
+  end
 
   def create
     @house = House.create!(house_params)
