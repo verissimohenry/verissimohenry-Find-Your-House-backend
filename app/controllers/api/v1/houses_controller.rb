@@ -2,12 +2,12 @@ class Api::V1::HousesController < ApplicationController
   skip_before_action :authorize_request
   def index
     @houses = House.all
-    json_response(@houses)
-  end
+    render json: @houses
+   end
 
   def create
     @house = House.create!(house_params)
-    json_response(@house, :created)
+    render json(@house, :created)
   end
 
   private
