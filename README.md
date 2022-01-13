@@ -4,7 +4,7 @@ This is backend API built for [Find-Your-House](https://github.com/verissimohenr
 
 ## Live Demo
 
-[Try it out here](https://61d6c159e9cb5aaf7e26b822--flamboyant-mestorf-3e0545.netlify.app/)
+[Try it out here](https://flamboyant-mestorf-3e0545.netlify.app/)
 
 ### Built with
 
