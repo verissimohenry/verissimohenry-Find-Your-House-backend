@@ -11,7 +11,7 @@ class HousesController < ApplicationController
 
   def index
     @houses = House.all
-    json_response(@houses)
+    render json: @houses
   end
 
   def show
