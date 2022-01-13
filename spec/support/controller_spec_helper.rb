@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'rails_helper'
-
 module ControllerSpecHelper
   # Generate token from user ID
   def generate_token(user_id)
