@@ -1,3 +1,6 @@
+require 'spec_helper'
+require 'rails_helper'
+
 FactoryBot.define do
   factory :house do
     name { Faker::Restaurant.name }

@@ -1,3 +1,6 @@
+require 'spec_helper'
+require 'rails_helper'
+
 FactoryBot.define do
   factory :favorite do
     # user_id { Faker::Number.within(range: 1..10) }

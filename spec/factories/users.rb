@@ -1,3 +1,6 @@
+require 'spec_helper'
+require 'rails_helper'
+
 FactoryBot.define do
   factory :user do
     name { Faker::Name.name }
