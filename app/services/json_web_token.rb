@@ -9,7 +9,7 @@ class JsonWebToken
 
     def decode(_token)
       decoded = Jwt.decode(payload, 'normalkeystring ', 'HS256')
-      #HashWithIndifferentAccess.new(decoded)
+      # HashWithIndifferentAccess.new(decoded)
     end
   end
 end
