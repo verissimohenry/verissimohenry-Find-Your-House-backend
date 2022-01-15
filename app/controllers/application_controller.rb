@@ -1,14 +1,11 @@
 class ApplicationController < ActionController::API
-  def current_user
-    header = request.headers['Authorization']
-    header = header.split(' ').last if header
-    begin
-      decoded = JsonWebToken.decode(header)
-      User.find(decoded['id'])
-    rescue ActiveRecord::RecordNotFound
-      render json: { message: 'You are not authorized' }, status: :unauthorized
-    rescue JWT::DecodeError
-      render json: { message: 'Unauthorized access' }, status: :unauthorized
-    end
+  rescue_from ActiveRecord::RecordNotDestroyed, with: :not_destroyed
+
+  def log_in(user)
+    session[:user_id] = user.id
+  end
+
+  def logout
+    session.delete(:user_id)
   end
 end
