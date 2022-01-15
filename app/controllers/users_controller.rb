@@ -1,16 +1,30 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize_request, only: %i[create]
+  skip_before_action :authorize_request, only: %i[index show]
+  # GET /users
+  def index
+    users = User.all
+    render json: users
+  end
 
+  # GET /users/1
+  def show
+    user = User.find_by(name: params[:id])
+    render json: user
+  rescue ActiveRecord::RecordNotFound
+    head :not_found
+  end
+
+  # POST /users
   def create
     user = User.create!(user_params)
-    auth_token = AuthenticateUser.new(user.email, user.password).user
-    response = {
-      id: user.id,
-      name: user.name,
-      message: Message.account_created,
-      auth_token: auth_token
-    }
-    json_response(response, :created)
+    render json: user, status: :created
+  end
+
+  # DELETE /users/1
+  def destroy
+    user = User.find(params[:id])
+    user.delete
+    head :no_content
   end
 
   private
