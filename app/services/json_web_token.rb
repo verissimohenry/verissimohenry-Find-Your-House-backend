@@ -4,12 +4,12 @@ class JsonWebToken
 
     def encode(payload, exp = 24.hours.from_now)
       payload[:exp] = exp.to_i
-      Jwt.encode(payload,'normalkeystring ', 'HS256')
+      Jwt.encode(payload, 'normalkeystring ', 'HS256')
     end
 
-    def decode(token)
-      decoded = Jwt.decode(payload,'normalkeystring ', 'HS256')
-      HashWithIndifferentAccess.new(decoded)
+    def decode(_token)
+      decoded = Jwt.decode(payload, 'normalkeystring ', 'HS256')
+      #HashWithIndifferentAccess.new(decoded)
     end
   end
 end
