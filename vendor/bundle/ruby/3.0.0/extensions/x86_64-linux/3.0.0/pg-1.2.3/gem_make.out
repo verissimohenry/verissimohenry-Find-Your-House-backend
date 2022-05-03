@@ -1,44 +1,65 @@
 current directory: /home/henry/verissimohenry-Find-Your-House-backend/vendor/bundle/ruby/3.0.0/gems/pg-1.2.3/ext
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20220502-20701-vlkgfw.rb extconf.rb
-checking for pg_config... no
-No pg_config... trying anyway. If building fails, please try again with
- --with-pg-config=/path/to/pg_config
-checking for libpq-fe.h... no
-Can't find the 'libpq-fe.h header
-*** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of necessary
-libraries and/or headers.  Check the mkmf.log file for more details.  You may
-need configuration options.
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20220503-13944-mhdl5p.rb extconf.rb
+checking for pg_config... yes
+Using config values from /usr/bin/pg_config
+checking for libpq-fe.h... yes
+checking for libpq/libpq-fs.h... yes
+checking for pg_config_manual.h... yes
+checking for PQconnectdb() in -lpq... yes
+checking for PQsetSingleRowMode()... yes
+checking for PQconninfo()... yes
+checking for PQsslAttribute()... yes
+checking for PQresultVerboseErrorMessage()... yes
+checking for PQencryptPasswordConn()... yes
+checking for PQresultMemorySize()... yes
+checking for timegm()... yes
+checking for rb_gc_adjust_memory_usage()... yes
+checking for unistd.h... yes
+checking for inttypes.h... yes
+checking for C99 variable length arrays... yes
+creating extconf.h
+creating Makefile
 
-Provided configuration options:
-	--with-opt-dir
-	--without-opt-dir
-	--with-opt-include
-	--without-opt-include=${opt-dir}/include
-	--with-opt-lib
-	--without-opt-lib=${opt-dir}/lib
-	--with-make-prog
-	--without-make-prog
-	--srcdir=.
-	--curdir
-	--ruby=/usr/bin/$(RUBY_BASE_NAME)3.0
-	--with-pg
-	--without-pg
-	--enable-windows-cross
-	--disable-windows-cross
-	--with-pg-config
-	--without-pg-config
-	--with-pg_config
-	--without-pg_config
-	--with-pg-dir
-	--without-pg-dir
-	--with-pg-include
-	--without-pg-include=${pg-dir}/include
-	--with-pg-lib
-	--without-pg-lib=${pg-dir}/lib
+current directory: /home/henry/verissimohenry-Find-Your-House-backend/vendor/bundle/ruby/3.0.0/gems/pg-1.2.3/ext
+make DESTDIR\= clean
 
-To see why this extension failed to compile, please check the mkmf.log which can be found here:
+current directory: /home/henry/verissimohenry-Find-Your-House-backend/vendor/bundle/ruby/3.0.0/gems/pg-1.2.3/ext
+make DESTDIR\=
+compiling gvl_wrappers.c
+compiling pg.c
+compiling pg_binary_decoder.c
+compiling pg_binary_encoder.c
+compiling pg_coder.c
+compiling pg_connection.c
+compiling pg_copy_coder.c
+compiling pg_errors.c
+compiling pg_record_coder.c
+compiling pg_result.c
+pg_result.c: In function ‘init_pg_result’:
+pg_result.c:1590:9: warning: ‘rb_cData’ is deprecated: by: rb_cObject.  Will be removed in 3.1. [-Wdeprecated-declarations]
+ 1590 |         rb_cPGresult = rb_define_class_under( rb_mPG, "Result", rb_cData );
+      |         ^~~~~~~~~~~~
+In file included from /usr/include/ruby-3.0.0/ruby/internal/core.h:27,
+                 from /usr/include/ruby-3.0.0/ruby/ruby.h:26,
+                 from /usr/include/ruby-3.0.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/usr/include/ruby-3.0.0/ruby/internal/core/rdata.h:169:1: note: declared here
+  169 | rb_cData(void)
+      | ^~~~~~~~
+compiling pg_text_decoder.c
+compiling pg_text_encoder.c
+compiling pg_tuple.c
+compiling pg_type_map.c
+compiling pg_type_map_all_strings.c
+compiling pg_type_map_by_class.c
+compiling pg_type_map_by_column.c
+compiling pg_type_map_by_mri_type.c
+compiling pg_type_map_by_oid.c
+compiling pg_type_map_in_ruby.c
+compiling pg_util.c
+linking shared-object pg_ext.so
 
-  /home/henry/verissimohenry-Find-Your-House-backend/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/pg-1.2.3/mkmf.log
-
-extconf failed, exit code 1
+current directory: /home/henry/verissimohenry-Find-Your-House-backend/vendor/bundle/ruby/3.0.0/gems/pg-1.2.3/ext
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 pg_ext.so ./.gem.20220503-13944-dmj0e3

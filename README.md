@@ -16,7 +16,7 @@ This is backend API built for [Find-Your-House](https://github.com/verissimohenr
 - Clone the repo `https://github.com/verissimohenry/-Find-Your-House-backend.git`
 - cd into the project
 - Run `bundle install` to install dependencies
-- In the terminal run `rails server` open up the live server
+- In the terminal run `rails server` or `rails s -p 3001` open up the live server
 - Append one of the endpoints to `http://localhost:3000/` in order to get/post data
 
 ## API endpoints
