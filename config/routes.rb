@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :sessions, only: [:create]
-  resources :registrations, only: [:create]
+  
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+   post 'auth/signup', to: 'registrations#create'
+   post 'auth/signin', to: 'sessions#create'
+   delete 'auth/signout', to: 'sessions#destroy'
+
+  resources :registrations, only: [:new, :create, :destroy]
   resources :houses
   resources :favourites
 end
