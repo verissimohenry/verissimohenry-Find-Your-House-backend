@@ -1,19 +1,20 @@
 class SessionsController < ApplicationController
-  def create
-    user = User.find_by(email: params['email'])
+  def new
+  end
 
-    if user&.try(:authenticate, params['password'])
-      data = user.attributes
-      token = JsonWebToken.encode(data)
-      render json: { token: token }, status: 200
+  def create
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to root_url, notice: "Logged in!"
     else
-      render json: { error: 'wrong credentials' }, status: 401
+      flash.now[:alert] = "Email or password is invalid"
+      render "new"
     end
   end
 
-  private
-
-  def user_params
-    params.permit(:email, :password)
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: "Logged out!"
   end
 end
