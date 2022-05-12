@@ -8,7 +8,6 @@ class JsonWebToken
     end
 
     def decode(_token)
-      payload[:exp] = exp.to_i
       decoded = JWT.decode(payload, 'normalkeystring ', 'HS256')
       HashWithIndifferentAccess.new(decoded)
     end
