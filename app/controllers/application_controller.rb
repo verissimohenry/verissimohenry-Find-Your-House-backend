@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::API
   def current_user
+  
     header = request.headers['Authorization']
-    header = header.split(' ').last if header
+    # header = header.split('.').last if header
     begin
       decoded = JsonWebToken.decode(header)
       User.find(decoded['id'])
