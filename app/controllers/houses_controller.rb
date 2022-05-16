@@ -10,9 +10,7 @@ class HousesController < ApplicationController
   end
 
   def index
-    
     binding.pry
-    
     @houses = House.all
     render json: @houses
   end
