@@ -7,5 +7,5 @@ class User < ApplicationRecord
                     uniqueness: true
   validates :password_digest, presence: true
   has_many :favourites, dependent: :destroy
-  has_many :homes, through: :favourites, source: :house
+  has_many :homes, through: :favourites, source: 'house'
 end
