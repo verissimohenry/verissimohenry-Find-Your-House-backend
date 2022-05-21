@@ -13,4 +13,8 @@ class FavouritesController < ApplicationController
       render json: { error: favourite.errors.full_messages }, status: 401
     end
   end
+
+  def user_params
+    params.permit(:user_id, :house_id)
+  end
 end
