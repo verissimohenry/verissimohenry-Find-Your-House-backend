@@ -1,4 +1,3 @@
-
 class JsonWebToken
   class << self
     SECRET_KEY = Rails.application.secrets.secret_key_base.to_s
@@ -12,5 +11,5 @@ class JsonWebToken
       decoded = JWT.decode(token, 'normalkeystring ', 'HS256')
       HashWithIndifferentAccess.new(decoded.first)
     end
-  end 
+  end
 end
