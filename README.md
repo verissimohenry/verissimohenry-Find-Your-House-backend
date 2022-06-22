@@ -23,7 +23,7 @@ This is backend API built for [Find-Your-House](https://github.com/verissimohenr
 
 - To get all available
 - To get data
-- To post new data `api/v1/favourites/`
+- To post new data `favourites`
   be sure to use POST request and provide payload in this format `{ "favourite": { "id": 5 }, "house": { "data": 69.96 }`
 
 ## AUTHOR
