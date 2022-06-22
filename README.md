@@ -19,6 +19,9 @@ This is backend API built for [Find-Your-House](https://github.com/verissimohenr
 - In the terminal run `rails s -p 3001` open up the live server
 - Append one of the endpoints to `http://localhost:3000/` in order to get/post data
 
+### Testing
+- To run tests write `rspec` in the terminal
+
 ## API endpoints
 
 - To get all available
