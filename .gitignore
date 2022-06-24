@@ -6,14 +6,12 @@
 
 # Ignore bundler config.
 /.bundle
-/node_modelues
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-!/sequenceserver-1.1.0.beta12
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
@@ -23,7 +21,11 @@
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-.byebug_history
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+node_modules
+sequenceserver-1.1.0.beta12
