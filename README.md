@@ -1,34 +1,85 @@
 # Find-Your-House-backend
 
-This is backend API built for [Find-Your-House](https://github.com/verissimohenry/-Find-Your-House-backend.git).
+This is backend API built for [Find-Your-House](https://github.com/verissimohenry/verissimohenry-Find-Your-House-frontendd/tree/frontend).
 
-## Live Demo
+This project is based on Ruby on Rails for the RESTFUL API which provide the house information and also authenticate user for the favourite house. It's a real-world-like project, built with business specifications.
+      
 
-[Try it out here](https://friendly-yonath-3ed2b1.netlify.app/)
+## 📝 Contents
 
-### Built with
+<p align="center">
+<a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#ll">Live Demo Link</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#gs">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#author">Author</a>
+</p>
 
-- Ruby
+## 🔧 Built with<a name = "with"></a>
+
 - Ruby on Rails
+- Ruby
+- Postgresql
+- Rack Cors
+- RESTFUL API
 
-## Getting Started Locally
+## Live Demo Link <a name = "ll"></a>
 
-- Clone the repo `https://github.com/verissimohenry/-Find-Your-House-backend.git`
-- cd into the project
-- Run `bundle install` to install dependencies
-- In the terminal run `rails s -p 3001` open up the live server
-- Append one of the endpoints to `http://localhost:3000/` in order to get/post data
+[Live Demo](https://sheltered-sea-10755.herokuapp.com/)
 
-### Testing
-- To run tests write `rspec` in the terminal
 
-## API endpoints
+## Getting Started <a name = "gs"></a>
 
-- To get all available
-- To get data
-- To post new data `favourites`
-  be sure to use POST request and provide payload in this format `{ "favourite": { "id": 5 }, "house": { "data": 69.96 }`
+To get a local copy of the repository please run the following commands on your terminal:
 
+```
+$ cd <folder>
+```
+
+~~~bash
+$ git clone https://github.com/verissimohenry/verissimohenry-Find-Your-House-backend.git
+$ cd find-your-house
+$ bundle install
+$ yarn install --check-files
+~~~
+
+Setup database with:
+
+> make sure you have postgres sql installed and running on your local machine
+
+> Go to config > database.yml
+
+Replace ```xxx``` with your ```own``` postgres sql username and password instead of mine
+```
+username: xxx
+password: xxx
+```
+
+> create and migrate the database by these commands
+
+```
+   rails db:create
+   rails db:migrate
+   rails db:seed
+```
+
+### How to run
+
+Start server with:
+
+```
+    rails s -p 3001
+```
+
+Open `http://localhost:3000/` in your browser.
+
+
+## To run Test
+
+~~~ruby
+$ rails db:migrate RAILS_ENV=test
+$ rspec --format documentation
+
+~~~
 ## AUTHOR
 
 👤 **Verissimo Henry**
@@ -43,8 +94,6 @@ This is backend API built for [Find-Your-House](https://github.com/verissimohenr
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Hat tip to `Marc-Antoine Roy on Behance` for his awesome design
 - Inspiration
 - etc
 
